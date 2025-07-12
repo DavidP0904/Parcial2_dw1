@@ -1,0 +1,36 @@
+.body 
+{
+      padding-top: 56px;
+      background-color: #105497;
+}
+.sidebar 
+{
+      position: fixed;
+      top: 56px;
+      bottom: 100px;
+      left: 10px;
+      z-index: 100;
+      height: calc(100vh - 56px);
+      padding: 48px 0 0;
+      background-color: #f8f9fa;
+}
+.card-img-top {
+  width:100%;
+  max-height: 150px !important;
+  object-fit: cover;
+}
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.couenter button {
+  margin: 0 10px;
+}
+counter2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}

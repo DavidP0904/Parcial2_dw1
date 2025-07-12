@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sitio Web con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<!-- Navbar -->
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Sistemas Operativos y más?</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hardware</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Software</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar">
+          <button class="btn btn-outline-light" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid mt-5 pt-3">
+    <div class="row">
+      
+      <!-- Sidebar -->
+      <nav class="col-md-3 col-lg-2 d-md-block sidebar bg-light">
+        <h5 class="ps-3">Sección Principal</h5>
+        <ul class="nav flex-column ps-3">
+          <li class="nav-item"><a class="nav-link" href="#">Preguntas frecuentes</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hardware</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Software</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contenido principal -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <!-- Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="Img/parcial1.jpeg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Sistemas Operativos usados para la programacion</h5>
+                <p class="card-text">En esta card se dara a conocer uno de los tantos sistemas operativos al cual nos referimos ahora como Linux</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCard1">Ver más</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="Img/parcial2.jpg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Lenguajes de Programacion</h5>
+                <p class="card-text">En esta card se dara a conocer uno de los tantos lenguajes de programacion al cual nos referimos ahora como Python</p>
+                <div id="counter2" class="mb-3">
+                    <span class="badge bg-secondary">Contador: 0</span>
+                </div>
+                <button class="btn btn-secondary" onclick="incrementCounter()">Incrementar Contador</button>
+                <button class="btn btn-secondary" onclick="resetCounter()">Reiniciar Contador</button>
+                <button class="btn btn-secondary" onclick="decrementCounter()">Decrementar Contador</button>
+                <script>
+                  let count = 0;
+                  function incrementCounter() {
+                    count++;
+                    document.getElementById('counter2').querySelector('span').textContent = 'Contador: ' + count;
+                  }
+                  function resetCounter() {
+                    count = 0;
+                    document.getElementById('counter2').querySelector('span').textContent = 'Contador: ' + count;
+                  }
+                  function decrementCounter() {
+                    if (count > 0) {
+                      count--;
+                      document.getElementById('counter2').querySelector('span').textContent = 'Contador: ' + count;
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <img src="Img/parcial3.jpeg" class="card-img-top" alt="">
+              <div class="card-body">
+                <h5 class="card-title">Los servidores</h5>
+                <p class="card-text">En esta card se dara a conocer uno de los tantos servidores al cual nos referimos ahora como Apache</p>
+                <div id="counter3" class="mb-3">
+                    <span class="badge bg-secondary">Contador: 0</span>
+                </div>
+                <button class="btn btn-secondary" onclick="incrementCounter2()">Incrementar Contador</button>
+                <button class="btn btn-secondary" onclick="resetCounter2()">Reiniciar Contador</button>
+                <button class="btn btn-secondary" onclick="decrementCounter2()">Decrementar Contador</button>
+                <script>
+                  let counter2 = 0;
+                  function incrementCounter2() {
+                    counter2++;
+                    document.getElementById('counter3').querySelector('span').textContent = 'Contador: ' + counter2;
+                  }
+                  function resetCounter2() {
+                    counter2 = 0;
+                    document.getElementById('counter3').querySelector('span').textContent = 'Contador: ' + counter2;
+                  }
+                  function decrementCounter2() {
+                    if (counter2 > 0) {
+                      counter2--;
+                      document.getElementById('counter3').querySelector('span').textContent = 'Contador: ' + counter2;
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <!-- Modal para Card 1 -->
+  <div class="modal fade" id="modalCard1" tabindex="-1" aria-labelledby="modalCard1Label" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalCard1Label">Detalles del Título 1</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          Aquí se muestra más información detallada sobre el contenido de la tarjeta 1. Puedes ampliar esta información tanto como quieras.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
