@@ -11,7 +11,7 @@ Es necesario el copiado mediante git bash en condición de windows abajo del 11 
 > [!IMPORTANT]
 El archivo cuenta con uso pleno de html simple acompañado de css y un poco de Java respecto a operaciones aplicadas
 
-```
+```html
 <script>
                   let count = 0;
                   function incrementCounter() {
